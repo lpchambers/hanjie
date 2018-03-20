@@ -1,10 +1,11 @@
-#include <stdio.h>
-#include "line.h"
+//#include "line.h"
+#include "grid.h"
 
 int main(void) {
-	Line l;
-	line_init(&l, 15);
-	printf("%d\n", l.len);
-	line_print(&l);
+	Grid g;
+	grid_init(&g, 15, 15);
+	grid_print_details(&g);
+	grid_print(&g);
+	grid_free(&g);
 	return 0;
 }

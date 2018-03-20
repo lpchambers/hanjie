@@ -1,5 +1,6 @@
 #include <stdbool.h>
 #include <stdint.h>
+#include <stdio.h>
 
 typedef struct Line {
 	char len;
@@ -35,4 +36,12 @@ void line_print(Line *line) {
 	}
 	if (i%5 == 0) printf("|");
 	printf("*\r\n");
+}
+
+void line_set_select_mask(Line *line, uint32_t newmask) {
+	line->select_mask = newmask;
+}
+
+void line_set_cross_mask(Line *line, uint32_t newmask) {
+	line->cross_mask = newmask;
 }
